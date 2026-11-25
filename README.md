@@ -2,6 +2,26 @@
 
 An unofficial continuation of **Binnen-I be gone**, a browser extension that converts gender-inclusive spelling on German-language websites into conventional forms.
 
+## Examples
+
+The extension replaces common forms of gender-inclusive German spelling in webpage text.
+
+| Original text | Displayed text | Form |
+| --- | --- | --- |
+| LehrerInnen | Lehrer | Binnen-I |
+| Lehrer*innen | Lehrer | Gender asterisk |
+| Lehrer:innen | Lehrer | Gender colon |
+| Lehrer_innen | Lehrer | Gender gap |
+| Lehrer/innen | Lehrer | Slash |
+| Lehrer(innen) | Lehrer | Parentheses |
+| Lehrerinnen und Lehrer | Lehrer | Double form |
+| Studierende | Studenten | Participial form |
+| Mitarbeitende | Mitarbeiter | Participial form |
+
+Double-form replacement is enabled by default. Participial-form replacement is optional and disabled by default; enable it in the extension settings.
+
+These examples illustrate the intended transformations. Results depend on grammatical context, the surrounding text and the selected settings. The original website is not modified on the server.
+
 ## Project goals
 
 - Preserve the original text-replacement functionality.
