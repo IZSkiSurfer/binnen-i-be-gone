@@ -26,17 +26,6 @@ Once the extension source is published:
 
 Unpacked extensions do not receive automatic browser-store updates. Update the local files and reload the extension to install a newer version.
 
-## Known upstream bug
-
-Version 3.1.1 can throw the following exception:
-
-```text
-Uncaught TypeError: Cannot read properties of null (reading 'getAttribute')
-    at acceptNode (binnenibegone.js:29)
-```
-
-The original code assumes that `document.activeElement` is always available. The planned fix guards against a null active element before accessing its attributes or calling `contains()`, preserving the original filtering behaviour.
-
 ## Browser compatibility
 
 | Browser | Status |
@@ -47,7 +36,7 @@ The original code assumes that `document.activeElement` is always available. The
 
 ## Contributing
 
-Bug reports and pull requests are welcome. Please include the browser and extension versions, steps to reproduce, the affected website if shareable, and relevant developer-console errors. Remove personal information from logs and screenshots.
+[Bug reports](https://github.com/IZSkiSurfer/binnen-i-be-gone/issues) and pull requests are welcome. Please include the browser and extension versions, steps to reproduce, the affected website if shareable, and relevant developer-console errors. Remove personal information from logs and screenshots.
 
 Keep changes focused and document intentional changes to text-replacement behaviour.
 
