@@ -26,7 +26,8 @@ function textNodesUnder(el) {
                         return NodeFilter.FILTER_REJECT;
                     } else {
                         var isUntreatedElement = node.parentNode ? (node.parentNode instanceof HTMLInputElement || node.parentNode instanceof HTMLTextAreaElement || node.parentNode instanceof HTMLScriptElement || node.parentNode instanceof HTMLStyleElement || node.parentNode.nodeName == "CODE" || node.parentNode.nodeName == "NOSCRIPT") : false;
-                        var isDivTextbox = (document.activeElement.getAttribute("role") == "textbox" || document.activeElement.getAttribute("contenteditable") == "true") && document.activeElement.contains(node);
+                        var activeElement = document.activeElement;
+                        var isDivTextbox = activeElement !== null && (activeElement.getAttribute("role") == "textbox" || activeElement.getAttribute("contenteditable") == "true") && activeElement.contains(node);
 
                         //Eingabeelemente, <script>, <style>, <code>-Tags nicht filtern
                         if (isUntreatedElement || isDivTextbox) {
